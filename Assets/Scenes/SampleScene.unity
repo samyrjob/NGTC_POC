@@ -300,6 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7fd3a16fa5ac44b885034ebcd62971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMotor
+  gravity: -9.8
+  jumpHeight: 3
 --- !u!114 &452000838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +314,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3bb281804c7e1488b308e05452f172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
+--- !u!114 &452000843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452000836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07779cebf464a9149ae545d6585c8454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLook
+  cam: {fileID: 1768257486}
+  xSensitivity: 30
+  ySensitivity: 30
 --- !u!1 &524959291
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +773,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 326612744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1768257486 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3927805527726670215, guid: 2b158558448b2ba41bd9f102b78fab3a, type: 3}
+  m_PrefabInstance: {fileID: 7873778632413491308}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1930787249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1074,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1573947316348021456, guid: 2b158558448b2ba41bd9f102b78fab3a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 452000837}
+    - targetCorrespondingSourceObject: {fileID: 1573947316348021456, guid: 2b158558448b2ba41bd9f102b78fab3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 452000843}
   m_SourcePrefab: {fileID: 100100000, guid: 2b158558448b2ba41bd9f102b78fab3a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
