@@ -16,9 +16,14 @@ public class InputManager : MonoBehaviour
         motor = GetComponent<PlayerMotor>();
     }
 
-    private void FixedUpdate()
+    //private void FixedUpdate()
+    //{
+    //    // tell the playermotor to move using the movement from our movement action
+    //    motor.processMove(onFoot.Movement.ReadValue<Vector2>());
+    //}
+
+    private void Update()
     {
-        // tell the playermotor to move using the movement from our movement action
         motor.processMove(onFoot.Movement.ReadValue<Vector2>());
     }
 
