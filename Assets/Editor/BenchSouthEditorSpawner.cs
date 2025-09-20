@@ -8,7 +8,7 @@ public class BenchSouthEditorSpawner : EditorWindow
     public float y = -0.15f;
     public float z = -61.931f;
     public float spacing = 0.5f;
-    public int count = 1000;
+    public int count = 100;
 
     [MenuItem("Tools/Bench South Spawner")]
     public static void ShowWindow()
