@@ -8,42 +8,42 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ch17_body
-    second: {fileID: 2100000, guid: 3eacc52cd49b05e45aee9353f88f9c82, type: 2}
+    second: {fileID: 2100000, guid: 5f412cd5f836b9840abb8e99917c9de0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ch17_hair
-    second: {fileID: 2100000, guid: 5538d44d2c525804eb76ab7a4cd99d8f, type: 2}
+    second: {fileID: 2100000, guid: 641932bd76ea8774f9abf0ba4ee86d75, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1001_Diffuse
-    second: {fileID: 2800000, guid: 364841ace64e82c48b33347a9b106e14, type: 3}
+    second: {fileID: 2800000, guid: 09761de02a557ab49bba7b848399bb23, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1001_Glossiness
-    second: {fileID: 2800000, guid: 1e51cfc92ec56ab4d8b6a0c42eeacfc4, type: 3}
+    second: {fileID: 2800000, guid: e3f91f0fde8532d46b43ca296a537fb9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1001_Normal
-    second: {fileID: 2800000, guid: 421d7eebfb033084184931ba51bd4ba7, type: 3}
+    second: {fileID: 2800000, guid: 73d645ccf03065d4e8deacf1f595d660, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1001_Specular
-    second: {fileID: 2800000, guid: 5abcda84449b24046aaf735c0a542e77, type: 3}
+    second: {fileID: 2800000, guid: ea63ba2ff944b0a48931146367dd0483, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1002_Diffuse
-    second: {fileID: 2800000, guid: 85ff04be32b5a704e98bff1996133551, type: 3}
+    second: {fileID: 2800000, guid: 98b544946c6090e418ac7b20d675c8a8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1002_Normal
-    second: {fileID: 2800000, guid: 1d6bec0325cd42a459912a8f6aaa23bc, type: 3}
+    second: {fileID: 2800000, guid: 7e127affc533bfc4d87ae3e9307a6fdf, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -69,36 +69,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Standing Idle
-      takeName: mixamo.com
-      internalID: -203655887218126122
-      firstFrame: 0
-      lastFrame: 360
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
