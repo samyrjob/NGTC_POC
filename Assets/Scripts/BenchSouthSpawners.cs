@@ -26,11 +26,22 @@ public class BenchSouthSpawner : MonoBehaviour
             return;
         }
 
+#if UNITY_EDITOR
+        // Record undo for this spawner before making changes
+        Undo.RecordObject(this, "Spawn Stadium");
+#endif
+
         // ===== Clear previously spawned characters =====
         for (int i = spawnedCharacters.Count - 1; i >= 0; i--)
         {
             if (spawnedCharacters[i] != null)
+            {
+#if UNITY_EDITOR
+                Undo.DestroyObjectImmediate(spawnedCharacters[i]); // undoable destruction
+#else
                 DestroyImmediate(spawnedCharacters[i]);
+#endif
+            }
         }
         spawnedCharacters.Clear();
 
@@ -58,9 +69,13 @@ public class BenchSouthSpawner : MonoBehaviour
             );
             SpawnRow(rowPos);
         }
+
+#if UNITY_EDITOR
+        // Mark the spawner as dirty so the scene saves this state
+        EditorUtility.SetDirty(this);
+#endif
     }
 
-    // Helper method: spawns a row of seats centered on given position
     void SpawnRow(Vector3 centerRowPos)
     {
         // LEFT SIDE
@@ -83,6 +98,11 @@ public class BenchSouthSpawner : MonoBehaviour
         int randomIndex = Random.Range(0, characterPrefabs.Length);
         GameObject prefab = characterPrefabs[randomIndex];
 
+#if UNITY_EDITOR
+        // Record undo for the new object
+        Undo.RegisterCreatedObjectUndo(prefab, "Spawn Character");
+#endif
+
         // Instantiate as child
         GameObject obj = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
         obj.name = prefab.name;
@@ -100,5 +120,10 @@ public class BenchSouthSpawner : MonoBehaviour
 
         // Track this object for safe clearing next time
         spawnedCharacters.Add(obj);
+
+#if UNITY_EDITOR
+        // Mark the spawned object as dirty so prefab changes persist
+        EditorUtility.SetDirty(obj);
+#endif
     }
 }
