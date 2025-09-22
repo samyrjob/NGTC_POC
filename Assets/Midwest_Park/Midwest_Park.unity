@@ -5439,6 +5439,105 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.409183, y: 195.11896, z: 167.52055}
   m_Center: {x: -0.00048828125, y: 97.55948, z: 83.76028}
+--- !u!1001 &639980392
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -62
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      propertyPath: m_Name
+      value: Remy@Sitting Talking (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 639980394}
+  m_SourcePrefab: {fileID: 100100000, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+--- !u!1 &639980393 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+  m_PrefabInstance: {fileID: 639980392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &639980394
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639980393}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c681be8cc59442948890db5b15626579, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &644835162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100886, guid: 326f6ba982043af4496f866fee104536, type: 3}
@@ -21959,3 +22058,4 @@ SceneRoots:
   - {fileID: 1045617213}
   - {fileID: 150670618}
   - {fileID: 1892954283}
+  - {fileID: 639980392}
