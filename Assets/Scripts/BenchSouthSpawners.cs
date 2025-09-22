@@ -17,8 +17,8 @@ public class BenchSouthSpawner : MonoBehaviour
     // Track all spawned characters
     private List<GameObject> spawnedCharacters = new List<GameObject>();
 
-    [ContextMenu("Spawn Seats")]
-    void SpawnSeats()
+    [ContextMenu("Spawn Stadium")]
+    void SpawnStadium()
     {
         if (characterPrefabs.Length == 0)
         {
@@ -34,17 +34,46 @@ public class BenchSouthSpawner : MonoBehaviour
         }
         spawnedCharacters.Clear();
 
-        // ===== Spawn LEFT side =====
+        // ===== CENTER ROW =====
+        SpawnRow(centerPosition);
+
+        // ===== ROWS ABOVE CENTER =====
+        for (int row = 1; row <= 18; row++)
+        {
+            Vector3 rowPos = new Vector3(
+                centerPosition.x,
+                centerPosition.y + 0.5f * row,
+                centerPosition.z - 0.9f * row
+            );
+            SpawnRow(rowPos);
+        }
+
+        // ===== ROWS BELOW CENTER =====
+        for (int row = 1; row <= 3; row++)
+        {
+            Vector3 rowPos = new Vector3(
+                centerPosition.x,
+                centerPosition.y - 0.5f * row,
+                centerPosition.z + 0.9f * row
+            );
+            SpawnRow(rowPos);
+        }
+    }
+
+    // Helper method: spawns a row of seats centered on given position
+    void SpawnRow(Vector3 centerRowPos)
+    {
+        // LEFT SIDE
         for (int i = 0; i < seatsPerSide; i++)
         {
-            Vector3 spawnPos = centerPosition + new Vector3(-seatSpacing * (i + 1), 0, 0);
+            Vector3 spawnPos = centerRowPos + new Vector3(-seatSpacing * (i + 1), 0, 0);
             SpawnRandomCharacter(spawnPos);
         }
 
-        // ===== Spawn RIGHT side =====
+        // RIGHT SIDE
         for (int i = 0; i < seatsPerSide; i++)
         {
-            Vector3 spawnPos = centerPosition + new Vector3(seatSpacing * (i + 1), 0, 0);
+            Vector3 spawnPos = centerRowPos + new Vector3(seatSpacing * (i + 1), 0, 0);
             SpawnRandomCharacter(spawnPos);
         }
     }
