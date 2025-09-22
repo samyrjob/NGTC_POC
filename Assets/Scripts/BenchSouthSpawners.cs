@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class BenchSouthSpawner : MonoBehaviour
 {
     [Header("Prefabs")]
-    public GameObject[] characterPrefabs; // all 11
+    public GameObject[] characterPrefabs; // all 12
     public GameObject[] rescaledPrefabs;  // only prefabs needing custom scale
 
     [Header("Seating Setup")]
