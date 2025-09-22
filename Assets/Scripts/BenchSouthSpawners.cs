@@ -10,7 +10,7 @@ public class BenchSouthSpawner : MonoBehaviour
     public GameObject[] rescaledPrefabs;  // only prefabs needing custom scale
 
     [Header("Seating Setup")]
-    public int seatsPerSide = 10;
+    public int seatsPerSide = 60;
     public float seatSpacing = 0.5f;
     public Vector3 centerPosition = new Vector3(-5, 0, -62);
 
