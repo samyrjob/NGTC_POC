@@ -43,7 +43,7 @@ public class BenchSouthSpawner : MonoBehaviour
             Vector3 rowPos = new Vector3(
                 centerPosition.x,
                 centerPosition.y + 0.5f * row,
-                centerPosition.z - 0.9f * row
+                centerPosition.z - 0.8f * row
             );
             SpawnRow(rowPos);
         }
@@ -54,7 +54,7 @@ public class BenchSouthSpawner : MonoBehaviour
             Vector3 rowPos = new Vector3(
                 centerPosition.x,
                 centerPosition.y - 0.5f * row,
-                centerPosition.z + 0.9f * row
+                centerPosition.z + 0.8f * row
             );
             SpawnRow(rowPos);
         }
