@@ -19924,6 +19924,66 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9368.564, y: 1.8189894e-12, z: 14103.872}
   m_Center: {x: -308.6599, y: 0.000015258785, z: 1151.936}
+--- !u!1 &1873622543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873622545}
+  - component: {fileID: 1873622544}
+  m_Layer: 0
+  m_Name: BenchSouthSpawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1873622544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873622543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e08421496268a04d9d5aa3c933e600b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BenSouthSpawner
+  characterPrefabs:
+  - {fileID: 919132149155446097, guid: 8d7008e14e721404da7a11a007c0be81, type: 3}
+  - {fileID: 919132149155446097, guid: fa8d1943b33935a4e89336712f50423d, type: 3}
+  - {fileID: 919132149155446097, guid: 601c6d25e38cce744a62987401f80bf9, type: 3}
+  - {fileID: 919132149155446097, guid: 753623eddfd1ff24c8818e81f6f9a5ba, type: 3}
+  - {fileID: 919132149155446097, guid: 2d43a5129997dc747bd503507b789031, type: 3}
+  - {fileID: 919132149155446097, guid: fab703c2d0097174dad91f54af864bf7, type: 3}
+  - {fileID: 919132149155446097, guid: 7bd20931d2b363242b43f29eacfb2180, type: 3}
+  - {fileID: 919132149155446097, guid: 2de0c369637473c40a8ed688d3b8d81c, type: 3}
+  - {fileID: 919132149155446097, guid: 85becc8d67439664a802785db66b2549, type: 3}
+  - {fileID: 919132149155446097, guid: 9aab81de484176f4ba427a5098600aa5, type: 3}
+  - {fileID: 919132149155446097, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
+  - {fileID: 919132149155446097, guid: ccea739d49276174f912f3d7dd2bf873, type: 3}
+  seatsPerSide: 100
+  seatSpacing: 0.5
+  centerPosition: {x: -5, y: 0, z: -62}
+--- !u!4 &1873622545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873622543}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1876747745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100610, guid: 326f6ba982043af4496f866fee104536, type: 3}
@@ -22059,3 +22119,4 @@ SceneRoots:
   - {fileID: 639980392}
   - {fileID: 1614724502}
   - {fileID: 755791469}
+  - {fileID: 1873622545}
