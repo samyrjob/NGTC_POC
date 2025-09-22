@@ -1,19 +1,23 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using System.Collections.Generic;
 
-[ExecuteInEditMode]   // Run in Edit Mode
+[ExecuteInEditMode]
 public class BenchSouthSpawner : MonoBehaviour
 {
     [Header("Prefabs")]
-    public GameObject[] characterPrefabs; // assign all your 11 prefabs here
-    public GameObject[] rescaledPrefabs;  // assign prefabs that need special scaling
+    public GameObject[] characterPrefabs; // all 11
+    public GameObject[] rescaledPrefabs;  // only prefabs needing custom scale
 
     [Header("Seating Setup")]
     public int seatsPerSide = 10;
     public float seatSpacing = 0.5f;
     public Vector3 centerPosition = new Vector3(-5, 0, -62);
 
-    [ContextMenu("Spawn Seats")] // Right-click → Spawn Seats
+    // Track all spawned characters
+    private List<GameObject> spawnedCharacters = new List<GameObject>();
+
+    [ContextMenu("Spawn Seats")]
     void SpawnSeats()
     {
         if (characterPrefabs.Length == 0)
@@ -22,15 +26,13 @@ public class BenchSouthSpawner : MonoBehaviour
             return;
         }
 
-        // ===== Clear old spawned characters =====
-        for (int i = transform.childCount - 1; i >= 0; i--)
+        // ===== Clear previously spawned characters =====
+        for (int i = spawnedCharacters.Count - 1; i >= 0; i--)
         {
-            Transform child = transform.GetChild(i);
-            if (child.CompareTag("StadiumCharacter"))
-            {
-                DestroyImmediate(child.gameObject);
-            }
+            if (spawnedCharacters[i] != null)
+                DestroyImmediate(spawnedCharacters[i]);
         }
+        spawnedCharacters.Clear();
 
         // ===== Spawn LEFT side =====
         for (int i = 0; i < seatsPerSide; i++)
@@ -52,20 +54,22 @@ public class BenchSouthSpawner : MonoBehaviour
         int randomIndex = Random.Range(0, characterPrefabs.Length);
         GameObject prefab = characterPrefabs[randomIndex];
 
-        // Instantiate as child of spawner
+        // Instantiate as child
         GameObject obj = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
-        obj.name = prefab.name;                  // keep prefab name
-        obj.tag = "StadiumCharacter";            // tag to identify spawned characters
+        obj.name = prefab.name;
         obj.transform.position = position;
 
-        // Apply custom scale only if in rescaledPrefabs array
+        // Apply custom scale if in rescaledPrefabs
         if (System.Array.Exists(rescaledPrefabs, p => p == prefab))
         {
             obj.transform.localScale = new Vector3(0.4f, 0.4f, 0.5f);
         }
         else
         {
-            obj.transform.localScale = prefab.transform.localScale; // default
+            obj.transform.localScale = prefab.transform.localScale;
         }
+
+        // Track this object for safe clearing next time
+        spawnedCharacters.Add(obj);
     }
 }
