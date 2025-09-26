@@ -11,8 +11,8 @@ public class BenchEastSpawner : MonoBehaviour
 
     [Header("Seating Setup")]
     public int seatsPerSide = 60;
-    public float seatSpacing = 0.5f;
-    public Vector3 centerPosition = new Vector3(50f, 3.56f, -25f);
+    public float seatSpacing = 0.6f;
+    public Vector3 centerPosition = new Vector3(49.7f, 3.56f, -25f);
 
     // Track all spawned characters
     private List<GameObject> spawnedCharacters = new List<GameObject>();
@@ -51,9 +51,9 @@ public class BenchEastSpawner : MonoBehaviour
         for (int row = 1; row <= 14; row++)
         {
             Vector3 rowPos = new Vector3(
-                centerPosition.x,
-                centerPosition.y + 0.5f * row,
-                centerPosition.z - 0.8f * row
+                centerPosition.x + 0.8f * row,
+                centerPosition.y + 0.56f * row,
+                centerPosition.z
             );
             SpawnRow(rowPos);
         }
@@ -62,9 +62,9 @@ public class BenchEastSpawner : MonoBehaviour
         for (int row = 1; row <= 14; row++)
         {
             Vector3 rowPos = new Vector3(
-                centerPosition.x,
-                centerPosition.y - 0.5f * row,
-                centerPosition.z + 0.8f * row
+                centerPosition.x - 0.8f* row,
+                centerPosition.y - 0.56f * row,
+                centerPosition.z
             );
             SpawnRow(rowPos);
         }
@@ -79,14 +79,14 @@ public class BenchEastSpawner : MonoBehaviour
         // LEFT SIDE
         for (int i = 0; i < seatsPerSide; i++)
         {
-            Vector3 spawnPos = centerRowPos + new Vector3(-seatSpacing * (i + 1), 0, 0);
+            Vector3 spawnPos = centerRowPos + new Vector3(0, 0, seatSpacing * (i + 1));
             SpawnRandomCharacter(spawnPos);
         }
 
         // RIGHT SIDE
         for (int i = 0; i < seatsPerSide; i++)
         {
-            Vector3 spawnPos = centerRowPos + new Vector3(seatSpacing * (i + 1), 0, 0);
+            Vector3 spawnPos = centerRowPos + new Vector3(0, 0, -seatSpacing * (i + 1));
             SpawnRandomCharacter(spawnPos);
         }
     }
@@ -114,7 +114,7 @@ public class BenchEastSpawner : MonoBehaviour
         }
         else
         {
-            obj.transform.localScale = prefab.transform.localScale;
+            obj.transform.localScale = new Vector3(1f, 1f, 0.9f);
         }
 
         spawnedCharacters.Add(obj);
