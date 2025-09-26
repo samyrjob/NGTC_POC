@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7204751051067226031
+--- !u!1001 &2677923609071529066
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,28 +9,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 54.05664
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -62
+      value: -26.23649
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
       propertyPath: m_LocalRotation.w
@@ -70,21 +58,21 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8636797885204989760}
+      addedObject: {fileID: 366626861278427403}
   m_SourcePrefab: {fileID: 100100000, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
---- !u!1 &8015566457049369342 stripped
+--- !u!1 &3019818050499776827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b0e4680ac4a4de4b8cc47e08549f887, type: 3}
-  m_PrefabInstance: {fileID: 7204751051067226031}
+  m_PrefabInstance: {fileID: 2677923609071529066}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &8636797885204989760
+--- !u!95 &366626861278427403
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8015566457049369342}
+  m_GameObject: {fileID: 3019818050499776827}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c681be8cc59442948890db5b15626579, type: 2}

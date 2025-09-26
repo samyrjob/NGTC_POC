@@ -10,7 +10,8 @@ public class BenchEastSpawner : MonoBehaviour
     public GameObject[] rescaledPrefabs;  // only prefabs needing custom scale
 
     [Header("Seating Setup")]
-    public int seatsPerSide = 60;
+    public int seatsRightSide = 60;
+    public int seatsLeftSide = 100;
     public float seatSpacing = 0.6f;
     public Vector3 centerPosition = new Vector3(49.7f, 3.56f, -25f);
 
@@ -77,14 +78,14 @@ public class BenchEastSpawner : MonoBehaviour
     void SpawnRow(Vector3 centerRowPos)
     {
         // LEFT SIDE
-        for (int i = 0; i < seatsPerSide; i++)
+        for (int i = 0; i < seatsLeftSide; i++)
         {
             Vector3 spawnPos = centerRowPos + new Vector3(0, 0, seatSpacing * (i + 1));
             SpawnRandomCharacter(spawnPos);
         }
 
         // RIGHT SIDE
-        for (int i = 0; i < seatsPerSide; i++)
+        for (int i = 0; i < seatsRightSide; i++)
         {
             Vector3 spawnPos = centerRowPos + new Vector3(0, 0, -seatSpacing * (i + 1));
             SpawnRandomCharacter(spawnPos);
