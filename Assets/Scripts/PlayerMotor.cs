@@ -16,9 +16,9 @@ public class PlayerMotor : MonoBehaviour
         controller = GetComponent<CharacterController>();
 
         print("is grounded or not : " + controller.isGrounded);
-   
+
         playerVelocity.y = -2f; // ensures no "hanging in air" bug
-        
+
     }
 
     void Update()
@@ -71,3 +71,6 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 }
+
+
+
