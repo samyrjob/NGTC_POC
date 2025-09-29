@@ -52,5 +52,15 @@ public class WalkForward : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("TurnTrigger"))
+        {
+            // Rotate 180 degrees around Y axis
+            transform.Rotate(0f, 180f, 0f);
+        }
+    }
 }
 
