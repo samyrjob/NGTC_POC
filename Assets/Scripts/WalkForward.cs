@@ -60,6 +60,8 @@ public class WalkForward : MonoBehaviour
         {
             // Rotate 180 degrees around Y axis
             transform.Rotate(0f, 180f, 0f);
+            // Print to console
+            Debug.Log(gameObject.name + " bumped into a TurnTrigger at " + Time.time + "s");
         }
     }
 }

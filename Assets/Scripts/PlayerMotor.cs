@@ -24,8 +24,8 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
 
-        print("is grounded or not from update : " + controller.isGrounded);
-        print("value of player velocity :" + playerVelocity.y);
+        //print("is grounded or not from update : " + controller.isGrounded);
+        //print("value of player velocity :" + playerVelocity.y);
         isGrounded = controller.isGrounded;
 
         // Reset downward velocity when grounded
