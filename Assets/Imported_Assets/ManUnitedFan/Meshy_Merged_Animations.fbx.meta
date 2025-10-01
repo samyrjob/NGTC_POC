@@ -41,11 +41,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Run_Turn_Right_frame_rate_60.fbx (1)
-      takeName: Run_Turn_Right_frame_rate_60.fbx
+      name: Walking_frame_rate_60.fbx (1)
+      takeName: Walking_frame_rate_60.fbx
       internalID: 3768571002574668635
       firstFrame: 0
-      lastFrame: 96
+      lastFrame: 62
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -304,7 +304,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.049999997
+    globalScale: 5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
