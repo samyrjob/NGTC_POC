@@ -15,7 +15,11 @@ public class ManUnitedFanNPCController  : MonoBehaviour
     {
         if (other.CompareTag("StairTrigger"))
         {
-            animator.SetTrigger("StandUp");
+            animator.SetTrigger("TurnLeftTrigger");
         }
+        else if (other.CompareTag("TurnTrigger"))
+            {
+                animator.SetTrigger("RunTurnRightTrigger");
+            }
     }
 }
